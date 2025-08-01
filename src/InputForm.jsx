@@ -13,7 +13,7 @@ export default function InputForm() {
     return (
       <button
         type="submit"
-        className="enabled:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed w-full px-3 py-2 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none"
+        className="md:col-span-2 enabled:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed w-full px-3 py-2 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none"
         disabled={pending}
       >
         {pending ? "Loading.." : "Submit"}
@@ -38,13 +38,13 @@ export default function InputForm() {
       <div className="bg-white dark:bg-stone-900">
         <form
           action={handleSubmit}
-          className=" max-w-md mx-auto  bg-white dark:bg-[#282828] rounded-lg shadow-md space-y-4"
+          className="max-w-lg mx-auto bg-white dark:bg-[#282828] rounded-lg shadow-md space-y-4"
         >
-          <fieldset className="border-2 border-blue-600 rounded-lg p-4 space-y-4">
+          <fieldset className="grid grid-cols-1 md:grid-cols-2 gap-2 border-2 border-blue-600 rounded-lg p-4 space-y-4">
             <legend className="text-lg font-semibold text-black dark:text-white">
               Enter Testimonial Information:{" "}
             </legend>
-
+            <div>
             <label htmlFor="firstName" className="text-black dark:text-white">
               First Name:
               <input
@@ -89,6 +89,8 @@ export default function InputForm() {
                 className="w-full px-3 py-2 text-black dark:text-white dark:bg-[#282828] border border-gray-300 rounded-md focus:border-sky-500 focus:outline focus:outline-sky-500 placeholder:text-gray-500 placeholder:italic"
               />
             </label>
+            </div>
+            <div>
             {/* theme picker */}
             <span className="text-black dark:text-white">
               Choose your theme:
@@ -156,6 +158,7 @@ export default function InputForm() {
               </div>
               {/* end theme picker */}
             </div>
+            </div>
             <SubmitButton />
           </fieldset>
         </form>
@@ -166,12 +169,6 @@ export default function InputForm() {
         </h2>
         <CreateCard data={data} />
       </div>
-      <footer>
-        <p className="text-center text-black dark:text-white mt-4">
-          Note: The form is for demonstration purposes only. Submissions are not
-          saved to server.
-        </p>
-      </footer>
     </>
   );
 }
