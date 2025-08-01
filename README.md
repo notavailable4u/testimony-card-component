@@ -62,6 +62,7 @@ npm run dev
 5. App will open in your browser at http://localhost:5173
 
 ## Screenshots
+
 **Input Form**
 ![Screenshot of Input Form](/src/assets/infput-form-screenshot.png)
 
