@@ -2,7 +2,7 @@
 
 A functional React component, stylized with Tailwind CSS, that takes User information gathered from a form and renders a "Testimonial" Card in a Responsive Design flex container that adjusts to different screen sizes, ensuring a good user experience across devices.
 
-This project was based on a [GreatFrontEnd](https://www.greatfrontend.com/projects) [project to develop a single Testimony Card based on the Figma Design specifications.](https://www.greatfrontend.com/projects/challenges/testimonial-card). I created this component, which builds on that concept by adding the ability to generating multiple cards at once, with three choices for color theme, mostly because I wanted to try out the new Form features in React 19 and to practice using Tailwind CSS as well as building projects with Vite.
+This project was based on a [GreatFrontEnd](https://www.greatfrontend.com/projects) [project to develop a single Testimony Card based on the Figma Design specifications.](https://www.greatfrontend.com/projects/challenges/testimonial-card). I created this component, which builds on that concept by adding the ability to generate multiple cards at once, with three choices for color theme, because I wanted to try out the new Form features in React 19 and to practice using Tailwind CSS and building projects with Vite.
 
 ## Features
 
