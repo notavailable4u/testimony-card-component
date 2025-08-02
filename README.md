@@ -64,9 +64,11 @@ npm run dev
 ## Screenshots
 
 **Input Form**
+
 ![Screenshot of Input Form](/src/assets/infput-form-screenshot.png)
 
 **Input Form - Dark Mode**
+
 ![Screenshot of Input Form Dark Mode](/src/assets/infput-form-dark-screenshot.png)
 
 **Testimonial Card - Original Theme - Gray**
