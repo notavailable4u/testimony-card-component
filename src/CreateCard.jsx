@@ -38,10 +38,10 @@ function CreateCard({ data }) {
         }
         return (
           <div
-            className={`max-w-md mx-auto ${backgroundVar} flex flex-col mb-2 justify-start items-center py-5 border-2 border-slate-600 rounded-lg`}
+            className={`max-w-lg mx-auto ${backgroundVar} flex flex-col mb-2 justify-start items-center py-5 border-2 border-slate-600 rounded-lg`}
             key={item.id}
           >
-            <div className="w-[340px] flex flex-col gap-4 bg-white dark:bg-[#282828] p-6 rounded-lg drop-shadow-sm border-2 border-zinc-500 dark:border-zinc-400 mb-5">
+            <div className="w-[340px] flex flex-col gap-4 bg-white dark:bg-[#282828] p-6 rounded-lg drop-shadow-sm border-2 border-zinc-500 dark:border-zinc-400 my-5">
               <div
                 className={`flex items-center gap-4 self-stretch ${borderBottomVar} p-2`}
               >
