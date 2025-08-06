@@ -2,7 +2,9 @@
 
 A functional React component, stylized with Tailwind CSS, that takes User information gathered from a form and renders a "Testimonial" Card in a Responsive Design flex container that adjusts to different screen sizes, ensuring a good user experience across devices.
 
-This project was based on a [GreatFrontEnd](https://www.greatfrontend.com/projects) [project to develop a single Testimony Card based on the Figma Design specifications.](https://www.greatfrontend.com/projects/challenges/testimonial-card). I created this component, which builds on that concept by adding the ability to generate multiple cards at once, with three choices for color theme, because I wanted to try out the new Form features in React 19 and to practice using Tailwind CSS and building projects with Vite.
+This project was based on a [GreatFrontEnd](https://www.greatfrontend.com/projects) [project to develop a single Testimonial Card based on the Figma Design specifications.](https://www.greatfrontend.com/projects/challenges/testimonial-card). (The source code for my submission on that project can be viewed at this repository:[single-testimonial-card](https://github.com/notavailable4u/single-testiimonial-card)  )
+
+I created this component, which builds on that concept by adding the ability to generate multiple cards at once, with three choices for color theme, because I wanted to try out the new Form features in React 19 and to practice using Tailwind CSS and building projects with Vite.
 
 ## Features
 
@@ -32,6 +34,7 @@ This project was based on a [GreatFrontEnd](https://www.greatfrontend.com/projec
 - [React v19.1](https://react.dev)
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react)
 - [TailwindCSS v4.1](https://tailwindcss.com/)
+- [Figma](https://www.figma.com/) for original Testimonial Card design implementation
 
 ## Installation
 
