@@ -106,69 +106,67 @@ export default function InputForm() {
             </span>
 
             <div className="flex flex-col flex-wrap">
-              <div className="border-2 border-gray-300 dark:border-gray-600 rounded-md mb-2 p-2  hover:bg-gray-100 dark:hover:bg-gray-700">
-                <label
-                  htmlFor="originalDesign"
-                  className="text-black dark:text-white "
-                >
-                  <input
-                    type="radio"
-                    id="originalDesign"
-                    name="theme"
-                    value="original"
-                    defaultChecked
-                    className="cursor-pointer"
-                  />
-                  <span className="pl-1 pr-3">Original - Gray</span>
-                </label>
+              {/* The whole box is the label, so clicking anywhere in it (text,
+                  preview image or padding) selects the theme. The selected box
+                  keeps a colored border, ring and tint via has-checked:, which
+                  is distinct from the lighter hover tint. */}
+              <label
+                htmlFor="originalDesign"
+                className="block cursor-pointer border-2 border-gray-300 dark:border-gray-600 rounded-md mb-2 p-2 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 has-checked:ring-2 has-checked:border-gray-600 has-checked:ring-gray-600 dark:has-checked:border-gray-300 dark:has-checked:ring-gray-300 has-checked:bg-gray-100 dark:has-checked:bg-gray-700 has-focus-visible:outline-2 has-focus-visible:outline-sky-500"
+              >
+                <input
+                  type="radio"
+                  id="originalDesign"
+                  name="theme"
+                  value="original"
+                  defaultChecked
+                  className="cursor-pointer"
+                />
+                <span className="pl-1 pr-3">Original - Gray</span>
                 <img
                   src={originalLightDark}
                   className="h-48 w-96 object-scale-down"
                   alt="Original theme light and dark mode preview"
                 />
-              </div>
+              </label>
 
-              <div className="border-2 border-gray-300 dark:border-gray-600 rounded-md mb-2 p-2  hover:bg-sky-100 dark:hover:bg-sky-950">
-                <label
-                  htmlFor="alternate1"
-                  className="text-black dark:text-white "
-                >
-                  <input
-                    type="radio"
-                    id="alternate1"
-                    name="theme"
-                    value="alternate1"
-                    className="cursor-pointer"
-                  />
-                  <span className="pl-1 pr-3">Alternate 1 - Blue</span>
-                </label>
+              <label
+                htmlFor="alternate1"
+                className="block cursor-pointer border-2 border-gray-300 dark:border-gray-600 rounded-md mb-2 p-2 text-black dark:text-white hover:bg-sky-100 dark:hover:bg-sky-950 has-checked:ring-2 has-checked:border-sky-600 has-checked:ring-sky-600 dark:has-checked:border-sky-400 dark:has-checked:ring-sky-400 has-checked:bg-sky-100 dark:has-checked:bg-sky-950 has-focus-visible:outline-2 has-focus-visible:outline-sky-500"
+              >
+                <input
+                  type="radio"
+                  id="alternate1"
+                  name="theme"
+                  value="alternate1"
+                  className="cursor-pointer"
+                />
+                <span className="pl-1 pr-3">Alternate 1 - Blue</span>
                 <img
                   src={blueLightDark}
                   className="h-48 w-96 object-scale-down"
                   alt="Alternate 1 theme light and dark mode preview"
                 />
-              </div>
+              </label>
 
-              <div className="border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 hover:bg-green-100 dark:hover:bg-green-950">
-                <label
-                  htmlFor="alternate2"
-                  className="text-black dark:text-white "
-                >
-                  <input
-                    type="radio"
-                    id="alternate2"
-                    name="theme"
-                    value="alternate2"
-                    className="cursor-pointer"
-                  />
-                  <span className="pl-1 pr-3">Alternate 2 - Green</span>
-                </label>
+              <label
+                htmlFor="alternate2"
+                className="block cursor-pointer border-2 border-gray-300 dark:border-gray-600 rounded-md p-2 text-black dark:text-white hover:bg-green-100 dark:hover:bg-green-950 has-checked:ring-2 has-checked:border-green-600 has-checked:ring-green-600 dark:has-checked:border-green-400 dark:has-checked:ring-green-400 has-checked:bg-green-100 dark:has-checked:bg-green-950 has-focus-visible:outline-2 has-focus-visible:outline-sky-500"
+              >
+                <input
+                  type="radio"
+                  id="alternate2"
+                  name="theme"
+                  value="alternate2"
+                  className="cursor-pointer"
+                />
+                <span className="pl-1 pr-3">Alternate 2 - Green</span>
                 <img
                   src={greenLightDark}
                   alt="Alternate 2 theme light and dark mode preview"
                   className="h-48 w-96 object-scale-down"
                 />
-              </div>
+              </label>
               {/* end theme picker */}
             </div>
             </div>
