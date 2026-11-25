@@ -4,30 +4,35 @@ import CreateCard from "./CreateCard";
 import originalLightDark from "./assets/originalLightDark.png";
 import blueLightDark from "./assets/blueLightDark.png";
 import greenLightDark from "./assets/greenLightDark.png";
+import type { Testimonial, Theme } from "./types";
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <button
+      type="submit"
+      className="md:col-span-2 enabled:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed w-full px-3 py-2 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none"
+      disabled={pending}
+    >
+      {pending ? "Loading.." : "Submit"}
+    </button>
+  );
+}
 
 export default function InputForm() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Testimonial[]>([]);
 
-  function SubmitButton() {
-    const { pending } = useFormStatus();
-    return (
-      <button
-        type="submit"
-        className="md:col-span-2 enabled:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed w-full px-3 py-2 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none"
-        disabled={pending}
-      >
-        {pending ? "Loading.." : "Submit"}
-      </button>
-    );
-  }
-
-  function handleSubmit(formData) {
-    const formValues = Object.fromEntries(formData.entries());
+  function handleSubmit(formData: FormData) {
+    const field = (name: string) => String(formData.get(name) ?? "");
 
     // Add a unique ID to each entry
-    const newEntry = {
+    const newEntry: Testimonial = {
       id: crypto.randomUUID(),
-      ...formValues,
+      firstName: field("firstName"),
+      lastName: field("lastName"),
+      email: field("email"),
+      comments: field("comments"),
+      theme: field("theme") as Theme,
     };
 
     setData((prevData) => [...prevData, newEntry]);
@@ -49,6 +54,7 @@ export default function InputForm() {
               First Name:
               <input
                 type="text"
+                id="firstName"
                 name="firstName"
                 placeholder="Sarah"
                 required
@@ -60,6 +66,7 @@ export default function InputForm() {
               Last Name:
               <input
                 type="text"
+                id="lastName"
                 name="lastName"
                 placeholder="Dole"
                 required
@@ -71,6 +78,7 @@ export default function InputForm() {
               Email:
               <input
                 type="email"
+                id="email"
                 name="email"
                 placeholder="email@domain.com"
                 required
@@ -81,6 +89,7 @@ export default function InputForm() {
             <label htmlFor="comments" className="text-black dark:text-white">
               Comments:
               <textarea
+                id="comments"
                 name="comments"
                 placeholder="&Prime;I've been searching for high-quality abstract images for my design projects, and I'm thrilled to have found this platform. The variety and depth of creativity are astounding!&Prime;"
                 required
@@ -104,7 +113,9 @@ export default function InputForm() {
                 >
                   <input
                     type="radio"
+                    id="originalDesign"
                     name="theme"
+                    value="original"
                     defaultChecked
                     className="cursor-pointer"
                   />
@@ -124,6 +135,7 @@ export default function InputForm() {
                 >
                   <input
                     type="radio"
+                    id="alternate1"
                     name="theme"
                     value="alternate1"
                     className="cursor-pointer"
@@ -144,6 +156,7 @@ export default function InputForm() {
                 >
                   <input
                     type="radio"
+                    id="alternate2"
                     name="theme"
                     value="alternate2"
                     className="cursor-pointer"
