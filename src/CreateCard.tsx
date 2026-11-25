@@ -1,19 +1,19 @@
 import profileThumbnail from "./assets/profile-thumbnail.png";
+import type { Testimonial } from "./types";
 
-/**
- * Renders a card for each user in the provided data array.
- * @param {Object} props
- * @param {Array} props.data - Array of user objects with id, firstName, lastName, email, and comments.
- * @returns {JSX.Element}
- */
-function CreateCard({ data }) {
+interface CreateCardProps {
+  data: Testimonial[];
+}
+
+/** Renders a card for each testimonial in the provided data array. */
+function CreateCard({ data }: CreateCardProps) {
   return (
     <>
       {data.map((item) => {
-        let backgroundVar;
-        let borderBottomVar;
-        let borderVar;
-        let textColorVar;
+        let backgroundVar: string;
+        let borderBottomVar: string;
+        let borderVar: string;
+        let textColorVar: string;
         switch (item.theme) {
           case "alternate1":
             backgroundVar = "bg-sky-100 dark:bg-sky-950";

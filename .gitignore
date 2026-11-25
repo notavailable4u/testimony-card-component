@@ -23,3 +23,5 @@ backups
 *.njsproj
 *.sln
 *.sw?
+
+.claude
