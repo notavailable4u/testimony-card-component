@@ -38,14 +38,14 @@ function CreateCard({ data }: CreateCardProps) {
         }
         return (
           <div
-            className={`max-w-lg mx-auto ${backgroundVar} flex flex-col mb-2 justify-start items-center py-5 border-2 border-slate-600 rounded-lg`}
+            className={`w-full min-w-0 max-w-md ${backgroundVar} flex flex-col justify-start items-center p-3 sm:p-5 border-2 border-slate-600 rounded-lg`}
             key={item.id}
           >
-            <div className="w-[340px] flex flex-col gap-4 bg-white dark:bg-[#282828] p-6 rounded-lg drop-shadow-sm border-2 border-zinc-500 dark:border-zinc-400 my-5">
+            <div className="w-full min-w-0 flex flex-col gap-4 bg-white dark:bg-[#282828] p-3 sm:p-5 rounded-lg drop-shadow-sm border-2 border-zinc-500 dark:border-zinc-400">
               <div
                 className={`flex items-center gap-4 self-stretch ${borderBottomVar} p-2`}
               >
-                <div className="w-12 h-12">
+                <div className="w-12 h-12 shrink-0">
                   <img
                     src={profileThumbnail}
                     className={`object-cover w-12 h-12 ${borderVar}`}
@@ -53,7 +53,7 @@ function CreateCard({ data }: CreateCardProps) {
                     title={`${item.firstName} ${item.lastName}`}
                   />
                 </div>
-                <div className="flex flex-col gap-px grow">
+                <div className="flex min-w-0 flex-col gap-px grow wrap-anywhere">
                   <span
                     className={`font-semibold text-lg text-justify ${textColorVar} dark:text-white`}
                   >
@@ -66,7 +66,7 @@ function CreateCard({ data }: CreateCardProps) {
                   </span>
                 </div>
               </div>
-              <span className="font-normal text-base text-neutral-600 dark:text-white">
+              <span className="font-normal text-base text-neutral-600 dark:text-white wrap-anywhere">
                 {item.comments}
               </span>
             </div>
